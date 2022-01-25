@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { FaUserAlt } from 'react-icons/fa';
 import { FaUserTie } from 'react-icons/fa';
+import { FiUserPlus}from 'react-icons/fi'
 import { HiCurrencyRupee } from 'react-icons/hi';
 import { FaWpforms } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
@@ -31,6 +32,11 @@ const Sidebar = () => {
 			text: 'Leave Application',
 			icon: <FaWpforms />,
 			onClick: () => navigate('/leaveapplication')
+		},
+		{
+			text: 'Add Employee',
+			icon: <FaWpforms />,
+			onClick: () => navigate('/addemployee')
 		}
 	];
 	return (
