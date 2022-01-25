@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-
 import { Form, Button, Col, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router';
 
 const AddEmployeeForm = () => {
+	const navigate = useNavigate();
+
 	const initialData = {
 		firstName: '',
 		middleName: '',
@@ -44,6 +46,7 @@ const AddEmployeeForm = () => {
 			dob: '',
 			address: ''
 		});
+		navigate('/employeedetails');
 	};
 
 	return (
@@ -199,11 +202,6 @@ const AddEmployeeForm = () => {
 					</Form.Group>
 					<div class="form-group">
 						<button class="btn btn-success btn-lg float-right" type="submit">
-							Submit
-						</button>
-					</div>
-					<div class="form-group">
-						<button class="btn btn-success btn-lg float-left" type="submit">
 							Submit
 						</button>
 					</div>
