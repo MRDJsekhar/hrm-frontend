@@ -7,7 +7,6 @@ import IconButton from '@mui/material/IconButton';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import { CgMenuMotion } from 'react-icons/cg';
 
 export default function Header() {
 	const [ anchorEl, setAnchorEl ] = useState(null);
@@ -24,7 +23,7 @@ export default function Header() {
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="fixed">
 				<Toolbar>
-					<Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft : '7em' }}>
+					<Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft : '12em' }}>
 						Arshaa
 					</Typography>
 					<div>

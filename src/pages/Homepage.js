@@ -2,10 +2,12 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import { makeStyles } from '@mui/styles';
 import { Routes, Route } from 'react-router-dom';
-import EmploeeDetails from '../pages/EmploeeDetails';
-import LeaveApplication from '../pages/LeaveApplication';
-import SalaryDetails from '../pages/SalaryDetails';
+import AddEmployeeForm from './AddEmplyoeeForm';
+import SalaryDetails from './SalaryDetails';
 import Header from '../components/Header';
+import EmployeeDetails from './EmployeeDetails';
+import EmployeeLeaveApplication from './EmployeeLeaveApplication';
+import { useState } from 'react';
 
 const useStyles = makeStyles({
 	container: {
@@ -15,18 +17,20 @@ const useStyles = makeStyles({
 
 const Homepage = () => {
 	const classes = useStyles();
+
 	return (
 		<div>
-			<div>
+			<div className={classes.container}>
 				<Sidebar />
 			</div>
-			<div style={{ marginLeft: '9em' }}>
+			<div>
 				<Header />
 			</div>
-			<div style={{ marginLeft: '10em', marginRight: '10em', marginTop: '6em' }}>
+			<div style={{ marginLeft: '15em', marginRight: '10em', marginTop: '6em' }}>
 				<Routes>
-					<Route path="/employeedetails" element={<EmploeeDetails />} />
-					<Route path="/leaveapplication" element={<LeaveApplication />} />
+					<Route exact path="/employeedetails" element={<EmployeeDetails />} />
+					<Route path="/addemployee" element={<AddEmployeeForm />} />
+					<Route path="/leaveapplication" element={<EmployeeLeaveApplication />} />
 					<Route path="/salary" element={<SalaryDetails />} />
 				</Routes>
 			</div>
