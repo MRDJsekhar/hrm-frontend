@@ -27,9 +27,8 @@ const Homepage = () => {
 				<Header />
 			</div>
 			<div style={{ marginLeft: '15em', marginRight: '10em', marginTop: '6em' }}>
-				<EmployeeDetails />
 				<Routes>
-					<Route exact path="/employeedetails" element={<EmployeeDetails />} />
+					<Route exact path="/home" element={<EmployeeDetails />} />
 					<Route path="/addemployee" element={<AddEmployeeForm />} />
 					<Route path="/leaveapplication" element={<EmployeeLeaveApplication />} />
 					<Route path="/salary" element={<SalaryDetails />} />

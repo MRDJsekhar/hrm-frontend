@@ -11,6 +11,9 @@ import { useNavigate } from 'react-router';
 const useStyles = makeStyles({
 	drawer: {
 		width: '100px'
+	},
+	paper: {
+		background: '#3CB371'
 	}
 });
 
@@ -21,7 +24,7 @@ const Sidebar = () => {
 		{
 			text: 'User',
 			icon: <FaUserTie />,
-			onClick: () => navigate('/employeedetails')
+			onClick: () => navigate('/home')
 		},
 		{
 			text: 'Salary',
@@ -40,7 +43,7 @@ const Sidebar = () => {
 		}
 	];
 	return (
-		<Drawer variant="permanent">
+		<Drawer variant="permanent" classes={{ paper: classes.paper }}>
 			<List>
 				<ListItem>
 					<ListItemIcon>

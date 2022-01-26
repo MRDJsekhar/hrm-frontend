@@ -55,7 +55,7 @@ const SignInSide = () => {
 							alignItems: 'center'
 						}}
 					>
-						<Avatar sx={{ m: 4, mt: 5, bgcolor: 'crimson' }}>
+						<Avatar sx={{ m: 4, mt: 5, bgcolor: 'darkgreen' }}>
 							<LockOutlinedIcon />
 						</Avatar>
 						<Typography component="h1" variant="h5">
@@ -79,7 +79,7 @@ const SignInSide = () => {
 								}}
 								autoFocus
 								variant="filled"
-								color="error"
+								color="success"
 							/>
 							<TextField
 								margin="normal"
@@ -98,9 +98,9 @@ const SignInSide = () => {
 									)
 								}}
 								variant="filled"
-								color="error"
+								color="success"
 							/>
-							<Button type="submit" color="error" variant="contained" sx={{ mt: 4 }}>
+							<Button type="submit" color="success" variant="contained" sx={{ mt: 4 }}>
 								Sign In
 							</Button>
 						</Box>
