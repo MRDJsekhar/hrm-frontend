@@ -7,7 +7,6 @@ import SalaryDetails from './SalaryDetails';
 import Header from '../components/Header';
 import EmployeeDetails from './EmployeeDetails';
 import EmployeeLeaveApplication from './EmployeeLeaveApplication';
-import { useState } from 'react';
 
 const useStyles = makeStyles({
 	container: {
@@ -26,7 +25,7 @@ const Homepage = () => {
 			<div>
 				<Header />
 			</div>
-			<div style={{ marginLeft: '15em', marginRight: '10em', marginTop: '6em' }}>
+			<div style={{ marginLeft: '15em', marginRight: '1em', marginTop: '6em' }}>
 				<Routes>
 					<Route exact path="/home" element={<EmployeeDetails />} />
 					<Route path="/addemployee" element={<AddEmployeeForm />} />

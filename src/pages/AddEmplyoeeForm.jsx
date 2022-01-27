@@ -27,6 +27,7 @@ const AddEmployeeForm = () => {
 			...details,
 			[name]: value
 		});
+		console.log(e.target.value);
 	};
 
 	const submitData = async (e) => {
@@ -46,7 +47,7 @@ const AddEmployeeForm = () => {
 			dob: '',
 			address: ''
 		});
-		navigate('/employeedetails');
+		navigate('/home');
 	};
 
 	return (
