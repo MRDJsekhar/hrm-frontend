@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-import { Table } from 'react-bootstrap';
+//import { Table } from 'react-bootstrap';
 
 const EmployeeDetails = () => {
 	const [ empData, setEmpData ] = useState([]);
 	useEffect(() => {
-		const getData = async () => {
-			const response = await axios.get('/employeedetails');
-			const data = await response.data;
-			console.log(data);
-			setEmpData(data);
-		};
 		getData();
 	}, []);
+	const getData = async () => {
+		const response = await axios.get('/employeedetails');
+		const data = await response.data;
+		console.log(data);
+		setEmpData(data);
+	};
 	return (
 		<div className="card" style={{ borderRadius: '5px' }}>
 			<div className="table-responsive">

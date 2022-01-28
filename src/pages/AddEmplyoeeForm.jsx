@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-import { Form, Button, Col, Row } from 'react-bootstrap';
+import { Form, Col, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
 
 const AddEmployeeForm = () => {
 	const navigate = useNavigate();
 
 	const initialData = {
+		employeeCode: '',
 		firstName: '',
 		middleName: '',
 		lastName: '',
@@ -27,7 +28,6 @@ const AddEmployeeForm = () => {
 			...details,
 			[name]: value
 		});
-		
 	};
 
 	const submitData = async (e) => {
@@ -37,6 +37,7 @@ const AddEmployeeForm = () => {
 		const data = await res.data;
 		console.log(data);
 		setDetails({
+			employeeCode: '',
 			firstName: '',
 			middleName: '',
 			lastName: '',
@@ -57,9 +58,24 @@ const AddEmployeeForm = () => {
 				<Form id="form" onSubmit={submitData}>
 					<Form.Group as={Row}>
 						<Form.Label column sm={3}>
+							Employee Code
+						</Form.Label>
+						<Col sm={8} className="form-input">
+							<Form.Control
+								onChange={handleData}
+								value={details.employeeCode}
+								name="employeeCode"
+								type="text"
+								placeholder="Employee Code"
+								required
+							/>
+						</Col>
+					</Form.Group>
+					<Form.Group as={Row}>
+						<Form.Label column sm={3}>
 							First Name
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.firstName}
@@ -74,7 +90,7 @@ const AddEmployeeForm = () => {
 						<Form.Label column sm={3}>
 							Middle Name
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.middleName}
@@ -88,7 +104,7 @@ const AddEmployeeForm = () => {
 						<Form.Label column sm={3}>
 							Last Name
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.lastName}
@@ -103,7 +119,7 @@ const AddEmployeeForm = () => {
 						<Form.Label as="legend" column sm={3}>
 							Gender
 						</Form.Label>
-						<Col sm={9}>
+						<Col sm={8}>
 							<Form.Check
 								inline
 								onChange={handleData}
@@ -130,7 +146,7 @@ const AddEmployeeForm = () => {
 						<Form.Label column sm={3}>
 							Contact No
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.contactNumber}
@@ -145,7 +161,7 @@ const AddEmployeeForm = () => {
 						<Form.Label column sm={3}>
 							Email ID
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.email}
@@ -160,7 +176,7 @@ const AddEmployeeForm = () => {
 						<Form.Label column sm={3}>
 							Pan No.
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.panCard}
@@ -175,7 +191,7 @@ const AddEmployeeForm = () => {
 						<Form.Label column sm={3}>
 							DOB
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.dob}
@@ -190,7 +206,7 @@ const AddEmployeeForm = () => {
 						<Form.Label column sm={3}>
 							Address
 						</Form.Label>
-						<Col sm={9} className="form-input">
+						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
 								value={details.address}
