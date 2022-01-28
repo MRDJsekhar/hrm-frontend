@@ -43,7 +43,7 @@ const Sidebar = () => {
 		}
 	];
 	return (
-		<Drawer variant="permanent" classes={{ paper: classes.paper }}>
+		<Drawer variant="permanent">
 			<List>
 				<ListItem>
 					<ListItemIcon>

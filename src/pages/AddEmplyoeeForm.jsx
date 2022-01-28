@@ -27,13 +27,13 @@ const AddEmployeeForm = () => {
 			...details,
 			[name]: value
 		});
-		console.log(e.target.value);
+		
 	};
 
 	const submitData = async (e) => {
 		e.preventDefault();
 		console.log('Inputdata', details);
-		const res = await axios.post('/employeeDetails', details);
+		const res = await axios.post('/employeedetails', details);
 		const data = await res.data;
 		console.log(data);
 		setDetails({
