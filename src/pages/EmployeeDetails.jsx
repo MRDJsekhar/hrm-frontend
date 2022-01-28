@@ -21,7 +21,7 @@ const EmployeeDetails = () => {
 					<thead>
 						<tr>
 							<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-								Employee Code
+								Employee ID
 							</th>
 							<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
 								First Name
@@ -58,7 +58,7 @@ const EmployeeDetails = () => {
 								<td>
 									<div class="d-flex px-2 py-1">
 										<div class="d-flex flex-column justify-content-center">
-											<h6 class="mb-0 text-xs">{data.employeeCode}</h6>
+											<h6 class="mb-0 text-xs">{data.employeeId}</h6>
 										</div>
 									</div>
 								</td>

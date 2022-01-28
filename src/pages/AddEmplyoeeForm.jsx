@@ -8,7 +8,7 @@ const AddEmployeeForm = () => {
 	const navigate = useNavigate();
 
 	const initialData = {
-		employeeCode: '',
+		employeeId: '',
 		firstName: '',
 		middleName: '',
 		lastName: '',
@@ -37,7 +37,7 @@ const AddEmployeeForm = () => {
 		const data = await res.data;
 		console.log(data);
 		setDetails({
-			employeeCode: '',
+			employeeId: '',
 			firstName: '',
 			middleName: '',
 			lastName: '',
@@ -58,15 +58,15 @@ const AddEmployeeForm = () => {
 				<Form id="form" onSubmit={submitData}>
 					<Form.Group as={Row}>
 						<Form.Label column sm={3}>
-							Employee Code
+							Employee ID
 						</Form.Label>
 						<Col sm={8} className="form-input">
 							<Form.Control
 								onChange={handleData}
-								value={details.employeeCode}
-								name="employeeCode"
+								value={details.employeeId}
+								name="employeeId"
 								type="text"
-								placeholder="Employee Code"
+								placeholder="Employee ID"
 								required
 							/>
 						</Col>
