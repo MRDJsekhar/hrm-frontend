@@ -21,6 +21,9 @@ const EmployeeDetails = () => {
 					<thead>
 						<tr>
 							<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+								Employee Code
+							</th>
+							<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
 								First Name
 							</th>
 							<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -52,6 +55,13 @@ const EmployeeDetails = () => {
 					<tbody>
 						{empData.map((data) => (
 							<tr key={data._id}>
+								<td>
+									<div class="d-flex px-2 py-1">
+										<div class="d-flex flex-column justify-content-center">
+											<h6 class="mb-0 text-xs">{data.employeeCode}</h6>
+										</div>
+									</div>
+								</td>
 								<td>
 									<div class="d-flex px-2 py-1">
 										<div class="d-flex flex-column justify-content-center">
