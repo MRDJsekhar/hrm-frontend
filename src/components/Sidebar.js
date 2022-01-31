@@ -1,6 +1,6 @@
 import { Drawer, ListItem, ListItemIcon, ListItemText, List, Divider } from '@mui/material';
 import React from 'react';
-import { makeStyles } from '@mui/styles';
+//import { makeStyles } from '@mui/styles';
 import { FaUserAlt } from 'react-icons/fa';
 import { FaUserTie } from 'react-icons/fa';
 import { FiUserPlus } from 'react-icons/fi';
@@ -8,17 +8,17 @@ import { HiCurrencyRupee } from 'react-icons/hi';
 import { FaWpforms } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
 
-const useStyles = makeStyles({
-	drawer: {
-		width: '100px'
-	},
-	paper: {
-		background: '#3CB371'
-	}
-});
+// const useStyles = makeStyles({
+// 	drawer: {
+// 		width: '100px'
+// 	},
+// 	paper: {
+// 		background: '#3CB371'
+// 	}
+// });
 
 const Sidebar = () => {
-	const classes = useStyles();
+	//const classes = useStyles();
 	const navigate = useNavigate();
 	const itemsList = [
 		{
